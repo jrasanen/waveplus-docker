@@ -6,3 +6,4 @@ service dbus start
 echo "Starting bluetoothd"
 bluetoothd &
 
+exec "$@"
