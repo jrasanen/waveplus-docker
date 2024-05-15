@@ -19,6 +19,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
+    - name: Check out waveplus repository at the latest tag
+      uses: actions/checkout@v4
+      with:
+        repository: alepar/waveplus
+        ref: main
+        path: "waveplus"
+
     - name: Copy our Dockerfile into waveplus context
       run: cp Dockerfile waveplus/Dockerfile
 
